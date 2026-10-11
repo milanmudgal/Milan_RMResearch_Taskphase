@@ -1,0 +1,64 @@
+review questions task 2 - sensors
+
+1) Basic classification of sensors:
+
+	Based on type of output:
+
+        a) Analog output:
+		When the output of the sensor is a continuous representation of the attributes it mentioned exactly.
+
+	b) Digital output:
+		When the output of the sensor is in the form of 1s and 0s, converted from analog by the ADC( analog to digital converter)
+
+	Conversion process:
+		The ADC first takes periodic samples of the analog output.
+		
+		These samples are then rounded off to the nearest whole no. value based on the resolution of the ADC.
+		Each output value is then converted into its corresponding binary value.
+		
+					
+	Based on power type:
+	
+	a) Active sensors:
+		That continuously emit their own energy/ field and track how that energy changes or is received by the environment.
+	b) Passive sensors: 
+		That rely on external energy to produce a quantifiable reaction.
+
+
+	Qualitative vs Quantitative sensors:
+	a) Qualitative: 	
+		That dont give exact measurements but can tell the absence or presence of something. Eg smoke detectors.
+	b) quantitative:
+		Which give numerical outputs of measurements.
+
+
+2) Magnetic proximity sensors:
+Magnetic proximity sensors detect a magnetic field by sensing for changes in magnetic flux in its 'sensing unit'.
+Sensing unit technologies include Hall effect, magneto resistance, reed switches etc.
+	
+	b) Magneto Resistance:
+		Using anisotropic materials like permalloy which change their resistance when influenced by a magnetic field.
+	
+	c)reed switches:	
+		They use 2 soft ferromagnetic substances inside a glass capscule filled with inert gasses. 
+		Under the influence of an external magnetic field, both the pieces get magnetized separately with opposite poles facing 		each other, causing them to attract each other. Upon contact they complete a circuit and therefore sensing a magnetic 			field.
+
+
+3) The role of magnetometers in IMUs:
+
+	The magnetometer's role in an IMU is to detect the earth's magnetic field direction which act as an anchor or reference point to 	correct the drift in a gyroscope.
+	Taking readings from both if the system knows that the gyroscope showed a reading of X degrees while the magnetometer showed no 	deviation with reference to the earth's field at all, the system can know the error/ internal bias the gyroscope's reading.
+	This is a problem specific to the gyroscope's reading of yaw as for roll and pitch the anchor is gravity, which is provided by the 	accelerometer.
+
+4) absolute vs incremental encoders:
+
+	Incremental encoders only send pulses and do not inherently know the position. The controller has to figure out what the position 	is.
+	In case of missed pulses/ power losses the encoder will have no idea as to the position.
+
+Absolute encoders know the absolute position at all times( eg, by giving each position a unique binary code).
+
+5) Photo diodes:
+	Detect the presence of light
+	are basically a P-N junction diode in reverse bias.
+	When light shines over the depletion region it creates a hole pair, the positive and negative charges get attracted towards 	different sides of the depletion layer due to its electrical field.
+	Due to their fast drift velocity they are able to pass through out of the depletion region. This movement of charge carriers 	results in current in the circuit known as photocurrent.
